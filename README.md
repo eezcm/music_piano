@@ -1,4 +1,4 @@
-# music_piano coworker : https://github.com/TK-32
+# music_piano (coworker : https://github.com/TK-32)
 An electronic organ with recording and playback functions（FPGA）
 Family : Cyclone IV E
 Device : EP4CE10F17C8N
