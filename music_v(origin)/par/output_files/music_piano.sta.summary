@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -13.471
+TNS   : -1546.406
+
+Type  : Slow 1200mV 85C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -5.687
+TNS   : -3844.364
+
+Type  : Slow 1200mV 85C Model Setup 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : -5.360
+TNS   : -33.453
+
+Type  : Slow 1200mV 85C Model Setup 'musical_piano:musical_piano_inst|count[1]'
+Slack : -2.323
+TNS   : -11.709
+
+Type  : Slow 1200mV 85C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : -0.215
+TNS   : -2.044
+
+Type  : Slow 1200mV 85C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -0.378
+TNS   : -18.364
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.737
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.742
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -3.201
+TNS   : -1220.021
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -346.724
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : -1.487
+TNS   : -47.584
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -12.526
+TNS   : -1430.651
+
+Type  : Slow 1200mV 0C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -5.327
+TNS   : -3569.232
+
+Type  : Slow 1200mV 0C Model Setup 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : -5.130
+TNS   : -31.767
+
+Type  : Slow 1200mV 0C Model Setup 'musical_piano:musical_piano_inst|count[1]'
+Slack : -2.058
+TNS   : -10.468
+
+Type  : Slow 1200mV 0C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : -0.112
+TNS   : -0.919
+
+Type  : Slow 1200mV 0C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -0.474
+TNS   : -38.153
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -3.201
+TNS   : -1220.045
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -346.724
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : -1.487
+TNS   : -47.664
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -5.298
+TNS   : -566.008
+
+Type  : Fast 1200mV 0C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -2.016
+TNS   : -1237.425
+
+Type  : Fast 1200mV 0C Model Setup 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : -1.648
+TNS   : -9.839
+
+Type  : Fast 1200mV 0C Model Setup 'musical_piano:musical_piano_inst|count[1]'
+Slack : -0.929
+TNS   : -3.264
+
+Type  : Fast 1200mV 0C Model Setup 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : 0.489
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -301.565
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|keyflag[0]'
+Slack : -1.000
+TNS   : -817.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'scankeyboard_debounce:scankeyboard_debounce_inst|cnt[0]'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|count[1]'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'musical_piano:musical_piano_inst|fre_mode[0]'
+Slack : 0.394
+TNS   : 0.000
+
+------------------------------------------------------------

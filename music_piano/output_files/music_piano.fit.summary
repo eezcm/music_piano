@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Mar 09 22:58:01 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : music_piano
+Top-level Entity Name : music_piano
+Family : Cyclone IV E
+Device : EP4CE10F17C8L
+Timing Models : Final
+Total logic elements : 2,066 / 10,320 ( 20 % )
+    Total combinational functions : 1,617 / 10,320 ( 16 % )
+    Dedicated logic registers : 1,075 / 10,320 ( 10 % )
+Total registers : 1075
+Total pins : 29 / 180 ( 16 % )
+Total virtual pins : 0
+Total memory bits : 1,000 / 423,936 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

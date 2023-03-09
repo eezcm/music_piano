@@ -1,0 +1,197 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity scankeyboard_debounce is
+    port(
+            clk:        in std_logic;                       --时钟信号
+            rst:        in std_logic;                       --复位信号 
+            c:          in std_logic_vector(4 downto 1);    --行信号      
+			r:          buffer std_logic_vector(4 downto 1);   --列信号 
+            keyvalue:   buffer std_logic_vector(4 downto 0);   --键值
+            keyfinish:  out std_logic                       --按键锁存标志   
+    
+        );
+end scankeyboard_debounce;
+
+architecture an of scankeyboard_debounce is
+	constant SET_TIME :	integer:=125;--设置定时器的时间为5ms
+    signal  cnt:      	    integer range 0 to 3:=0;--行扫描信号的产生
+    signal  time_cnt:      	integer range 0 to 500000:=0;
+    signal           c1:std_logic_vector(4 downto 1 );               --第一行的列输入
+    signal           c2:std_logic_vector(4 downto 1 );               --第二行的列输入
+    signal           c3:std_logic_vector(4 downto 1 );               --第三行的列输入
+    signal           c4:std_logic_vector(4 downto 1 );               --第四行的列输入
+    signal           c1_n:std_logic_vector(4 downto 1 );             --C1的下一个状态
+    signal           c2_n:std_logic_vector(4 downto 1 );             --C2的下一个状态
+    signal           c3_n:std_logic_vector(4 downto 1 );             --C3的下一个状态
+    signal           c4_n:std_logic_vector(4 downto 1 );             --C4的下一个状态
+    signal           c1_tmp:std_logic_vector(4 downto 1 );            --第一行的去抖列输入
+    signal           c2_tmp:std_logic_vector(4 downto 1 );            --第二行的去抖列输入
+    signal           c3_tmp:std_logic_vector(4 downto 1 );            --第三行的去抖列输入
+    signal           c4_tmp:std_logic_vector(4 downto 1 );            --第四行的去抖列输入
+    
+    signal           keyflag:std_logic_vector(3 downto 0 );          --每行是否有键按下的标志
+    signal           keyflag_n:std_logic_vector(3 downto 0 );        --keyflag的下一个状态
+    signal           keyvalue_n:std_logic_vector(4 downto 0 );       --keyvalue的下一个状态
+begin 
+    process(clk,rst)--扫描进程
+    begin
+        if rst='0' then--如果复位
+            time_cnt<=0;
+			cnt<=0;
+        elsif clk'event and clk='1' then--时钟上升沿
+            if time_cnt=SET_TIME then
+				time_cnt<=0;
+				if cnt=3 then
+					cnt<=0;
+				else 
+					cnt<=cnt+1;
+				end if;
+			else
+				time_cnt<=time_cnt+1;
+            end if;
+        end if;
+    end process; 
+    
+    process(cnt)--扫描进程
+    begin
+        case cnt is
+			when 0=>r<="1110";
+			when 1=>r<="1101";
+			when 2=>r<="1011";
+			when 3=>r<="0111";
+            when others=>
+        end case;
+    end process;     
+    
+    process(r(1))--扫描进程
+    begin
+       if r(1)'event and r(1)='1' then--如果复位
+           c1 <= c;					
+           c1_n <= c1;	
+       end if;
+    end process;  
+    c1_tmp<=c1 or c1_n;   --第一行去抖查询输入
+    process(r(2))--扫描进程
+    begin
+       if r(2)'event and r(2)='1' then--如果复位
+           c2 <= c;					
+           c2_n <= c2;	
+       end if;
+    end process;  
+    c2_tmp<=c2 or c2_n;   --第一行去抖查询输入
+    process(r(3))--扫描进程
+    begin
+       if r(3)'event and r(3)='1' then--如果复位
+           c3 <= c;					
+           c3_n <= c3;	
+       end if;
+    end process;  
+    c3_tmp<=c3 or c3_n;   --第一行去抖查询输入    
+    process(r(4))--扫描进程
+    begin
+       if r(4)'event and r(4)='1' then--如果复位
+           c4 <= c;					
+           c4_n <= c4;	
+       end if;
+    end process;  
+    c4_tmp<=c4 or c4_n;   --第一行去抖查询输入    
+	 
+     
+    process(clk,rst)--时序电路,用来给keyflag寄存器赋值
+    begin
+        if rst='0' then--如果复位
+            keyflag <= "1111";	
+        elsif clk'event and clk='1' then--时钟上升沿
+            keyflag<=keyflag_n;
+        end if;
+    end process; 
+    
+    process(r,c1_tmp,c2_tmp,c3_tmp,c4_tmp)
+    begin
+        case r is
+			when "1110"=>if c1_tmp="1111" then
+                            keyflag_n<=keyflag(3 downto 1)&'1';
+                         else
+                            keyflag_n<=keyflag(3 downto 1)&'0';
+                         end if;
+			when "1101"=>if c2_tmp="1111" then
+                            keyflag_n<=keyflag(3 downto 2)&'1'&keyflag(0);
+                         else
+                            keyflag_n<=keyflag(3 downto 2)&'0'&keyflag(0);
+                         end if;
+			when "1011"=>if c3_tmp="1111" then
+                            keyflag_n<=keyflag(3)&'1'&keyflag(1 downto 0);
+                         else
+                            keyflag_n<=keyflag(3)&'0'&keyflag(1 downto 0);
+                         end if;
+			when "0111"=>if c4_tmp="1111" then
+                            keyflag_n<='1'&keyflag(2 downto 0);
+                         else
+                            keyflag_n<='0'&keyflag(2 downto 0);
+                         end if;
+            when others=>keyflag_n<=keyflag;
+        end case;
+    end process; 
+    
+    
+    process(clk,rst)--时序电路,用来给keyvalue寄存器赋值
+    begin
+        if rst='0' then--如果复位
+            keyvalue <= "10000";				--初始化keyvalue值
+        elsif clk'event and clk='1' then--时钟上升沿
+            keyvalue <= keyvalue_n;				--用来给keyvalue赋值
+        end if;
+    end process;
+    
+    
+    process(keyflag,c1_tmp,c2_tmp,c3_tmp,c4_tmp)
+    begin
+        case keyflag is
+			when "1110"=>case c1_tmp is
+                            when "1110"=>keyvalue_n<="00000";
+                            when "1101"=>keyvalue_n<="00001";
+                            when "1011"=>keyvalue_n<="00010";
+                            when "0111"=>keyvalue_n<="00011";
+                            when others=>keyvalue_n <= keyvalue;
+                          end case;
+			when "1101"=>case c2_tmp is
+                            when "1110"=>keyvalue_n<="00100";
+                            when "1101"=>keyvalue_n<="00101";
+                            when "1011"=>keyvalue_n<="00110";
+                            when "0111"=>keyvalue_n<="00111";
+                            when others=>keyvalue_n <= keyvalue;
+                          end case;
+			when "1011"=>case c3_tmp is
+                            when "1110"=>keyvalue_n<="01000";
+                            when "1101"=>keyvalue_n<="01001";
+                            when "1011"=>keyvalue_n<="01010";
+                            when "0111"=>keyvalue_n<="01011";
+                            when others=>keyvalue_n <= keyvalue;
+                          end case;
+			when "0111"=>case c4_tmp is
+                            when "1110"=>keyvalue_n<="01100";
+                            when "1101"=>keyvalue_n<="01101";
+                            when "1011"=>keyvalue_n<="01110";
+                            when "0111"=>keyvalue_n<="01111";
+                            when others=>keyvalue_n <= keyvalue;
+                          end case;
+            when "1111"=>keyvalue_n<= "10000";
+            when others=>keyvalue_n<=keyvalue;
+        end case;
+    end process;   
+    
+    process(keyflag)--生成键值锁存标志  
+    begin
+        if keyflag="1111" then
+            keyfinish<='1';
+        else
+            keyfinish<='0';
+        end if;
+    end process;
+      
+    
+end an;
+

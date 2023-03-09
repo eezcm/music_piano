@@ -1,0 +1,23 @@
+Info: Start Nativelink Simulation process
+Info: NativeLink has detected VHDL design -- VHDL simulation models will be used
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  RTL
+Family                :  cycloneive
+Quartus root          :  d:/programfiles/fpga/quartus/bin64/
+Quartus sim root      :  d:/programfiles/fpga/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  
+Sim SDF file          :  
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script d:/programfiles/fpga/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File music_piano_run_msim_rtl_vhdl.do already exists - backing up current file as music_piano_run_msim_rtl_vhdl.do.bak8
+Info: Spawning ModelSim Simulation software 

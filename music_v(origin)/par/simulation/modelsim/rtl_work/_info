@@ -1,0 +1,188 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/music_v/par/simulation/modelsim
+T_opt
+Z1 !s110 1675673702
+VCE2E<@[^3ZA>1nibB<7Q90
+04 19 16 work music_piano_vhd_tst music_piano_arch 1
+=1-84a93e3cda3d-63e0c066-2f3-488
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+Emusic_piano
+Z2 w1675660508
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8C:/Users/Administrator/Desktop/music_v/rtl/music_piano.vhd
+Z8 FC:/Users/Administrator/Desktop/music_v/rtl/music_piano.vhd
+l0
+L6
+VILd=DIHYN11PMlAnfL6`?3
+!s100 kl4P=2kAi`AH09OYWU2hN2
+Z9 OL;C;10.4;61
+31
+R1
+!i10b 1
+Z10 !s108 1675673702.304000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Desktop/music_v/rtl/music_piano.vhd|
+Z12 !s107 C:/Users/Administrator/Desktop/music_v/rtl/music_piano.vhd|
+!i113 0
+Z13 o-93 -work work
+Z14 tExplicit 1
+Aan
+Z15 DEx4 work 13 musical_piano 0 22 FA[EA0BeAH2k0H8F[nKal0
+Z16 DEx4 work 21 scankeyboard_debounce 0 22 ^8OkgZG??R=8;U87zVcz62
+R3
+R4
+R5
+R6
+DEx4 work 11 music_piano 0 22 ILd=DIHYN11PMlAnfL6`?3
+l20
+L17
+VYib`AG?biLVS^WFCC9U6c2
+!s100 IGEoVzFmZkf`2g=Bf<J8]1
+R9
+31
+R1
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Emusic_piano_vhd_tst
+Z17 w1675673217
+R5
+R6
+R0
+Z18 8C:/Users/Administrator/Desktop/music_v/par/simulation/modelsim/music_piano.vht
+Z19 FC:/Users/Administrator/Desktop/music_v/par/simulation/modelsim/music_piano.vht
+l0
+L30
+Vf@TJXA<d9coD@m9I`5MLP1
+!s100 C[8m7QR8A`3:BXj<i>5SF2
+R9
+31
+R1
+!i10b 1
+Z20 !s108 1675673702.416000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Desktop/music_v/par/simulation/modelsim/music_piano.vht|
+Z22 !s107 C:/Users/Administrator/Desktop/music_v/par/simulation/modelsim/music_piano.vht|
+!i113 0
+R13
+R14
+Amusic_piano_arch
+R5
+R6
+DEx4 work 19 music_piano_vhd_tst 0 22 f@TJXA<d9coD@m9I`5MLP1
+l53
+L32
+V05GN;VA=Agi9HdH2l`SC@2
+!s100 QXlmAMIk8::Q7:P_YD7ZW2
+R9
+31
+R1
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R13
+R14
+Emusical_piano
+Z23 w1675673640
+R3
+R4
+R5
+R6
+R0
+Z24 8C:/Users/Administrator/Desktop/music_v/rtl/musical_piano.vhd
+Z25 FC:/Users/Administrator/Desktop/music_v/rtl/musical_piano.vhd
+l0
+L6
+VFA[EA0BeAH2k0H8F[nKal0
+!s100 Q6fMHaUEod`bi;^E90zZ40
+R9
+31
+R1
+!i10b 1
+Z26 !s108 1675673702.176000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Desktop/music_v/rtl/musical_piano.vhd|
+Z28 !s107 C:/Users/Administrator/Desktop/music_v/rtl/musical_piano.vhd|
+!i113 0
+R13
+R14
+Aan
+R3
+R4
+R5
+R6
+R15
+l55
+L17
+VoO]O?`I8=nT;cTP=MgcMD2
+!s100 dLf@c0mjDci2he4=_>AUW0
+R9
+31
+R1
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R13
+R14
+Escankeyboard_debounce
+Z29 w1675515798
+R3
+R4
+R5
+R6
+R0
+Z30 8C:/Users/Administrator/Desktop/music_v/rtl/scankeyboard_debounce.vhd
+Z31 FC:/Users/Administrator/Desktop/music_v/rtl/scankeyboard_debounce.vhd
+l0
+L6
+V^8OkgZG??R=8;U87zVcz62
+!s100 [^i>>2HF^5I1`?<FHTg8c2
+R9
+31
+R1
+!i10b 1
+Z32 !s108 1675673702.041000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Desktop/music_v/rtl/scankeyboard_debounce.vhd|
+Z34 !s107 C:/Users/Administrator/Desktop/music_v/rtl/scankeyboard_debounce.vhd|
+!i113 0
+R13
+R14
+Aan
+R3
+R4
+R5
+R6
+R16
+l38
+L18
+VhYnY>:6HbgGZM8EhDHT5z2
+!s100 Q5H^T_gTF:41lR?99`GLc2
+R9
+31
+R1
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R13
+R14
